@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!ELEMENT calificaciones (asignatura, calificacion+, diligencia*)>
+<!ELEMENT asignatura (#PCDATA)>
+<!ELEMENT calificacion (nif, nombre?, nota)>
+<!ELEMENT nif (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT nota (#PCDATA)>
+<!ELEMENT diligencia (nif, nombre?, nota)>
+
+
+<!ATTLIST calificaciones
+	curso CDATA #IMPLIED
+	convocatoria (febrero|junio|julio) #REQUIRED
+>
+
+<!ATTLIST diligencia
+	fecha CDATA #REQUIRED
+	extraodinaria (si|no) "no"
+>

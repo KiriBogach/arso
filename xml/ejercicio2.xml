@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE calificaciones SYSTEM "ejercicio2.dtd" >
+
+<calificaciones convocatoria="junio" curso="2019">
+	<asignatura>ArSo</asignatura>
+	
+	<calificacion>
+		<nif>X5126520G</nif>
+		<nombre>Kyryl Bogach</nombre>
+		<nota>9.1</nota>
+	</calificacion>
+	<calificacion>
+		<nif>48215212F</nif>
+		<nombre>Antonio Garcia</nombre>
+		<nota>5.715</nota>
+	</calificacion>
+	
+	<diligencia extraodinaria="si" fecha="26/07/2019">
+		<nif>57292512F</nif>
+		<nombre>Pedro Ferrandez</nombre>
+		<nota>9.52</nota>
+	</diligencia>
+	
+</calificaciones>
