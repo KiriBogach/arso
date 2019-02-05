@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE libro SYSTEM "ejercicio1.dtd">
+
+<libro>
+   	<titulo>El Teclado</titulo>
+   	<autor>Eduardo Santos</autor>
+   	<seccion>
+         	<nombre>Introduccion</nombre>
+         	<contenido>
+                	<texto>Esta es la Introduccion</texto>
+         	</contenido>
+   	</seccion>
+   	<seccion>
+         	<nombre>Primer tomo</nombre>
+         	<contenido>
+                	<seccion>
+                      	<nombre>S1</nombre>
+                	</seccion>
+                	<seccion>
+                      	<nombre>S2</nombre>
+                	</seccion>
+         	</contenido>
+   	</seccion>
+</libro>  
