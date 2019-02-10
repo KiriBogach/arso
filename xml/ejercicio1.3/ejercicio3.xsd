@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/calificaciones"
+	xmlns:tns="http://www.example.org/calificaciones" elementFormDefault="qualified">
+
+	<!-- Tipos: -->
+	<complexType name="tipo_calificaciones">
+		<sequence>
+			<element name="asignatura" type="string" />
+			<element name="calificacion" type="tns:tipo_calificacion"
+				maxOccurs="unbounded" />
+			<element name="diligencia" type="tns:tipo_diligencia"
+				minOccurs="0" maxOccurs="unbounded" />
+		</sequence>
+		<attribute name="curso" type="positiveInteger" use="optional" />
+		<attribute name="convocatoria" type="tns:tipo_convocatoria"
+			use="required" />
+	</complexType>
+
+	<simpleType name="tipo_convocatoria">
+		<restriction base="string">
+			<enumeration value="febrero" />
+			<enumeration value="junio" />
+			<enumeration value="julio" />
+		</restriction>
+	</simpleType>
+
+	<complexType name="tipo_calificacion">
+		<sequence>
+			<element name="nif" type="string" />
+			<element name="nombre" type="string" minOccurs="0" />
+			<element name="nota" type="tns:tipo_nota" />
+		</sequence>
+	</complexType>
+
+	<complexType name="tipo_diligencia">
+		<complexContent>
+			<extension base="tns:tipo_calificacion">
+				<sequence>
+					<element name="fecha" type="date" />
+				</sequence>
+				<attribute name="extraordinaria" type="string" default="no" />
+			</extension>
+		</complexContent>
+	</complexType>
+
+	<simpleType name="tipo_nota">
+		<restriction base="double">
+			<minInclusive value="0" />
+			<maxInclusive value="10" />
+		</restriction>
+	</simpleType>
+	
+	<!-- Elemento raíz: -->
+	<element name="calificaciones" type="tns:tipo_calificaciones" />
+</schema>

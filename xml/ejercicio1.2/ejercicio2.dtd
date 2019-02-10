@@ -17,5 +17,5 @@
 
 <!ATTLIST diligencia
 	fecha CDATA #REQUIRED
-	extraodinaria (si|no) "no"
+	extraordinaria (si|no) "no"
 >
