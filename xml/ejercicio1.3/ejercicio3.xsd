@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+	Bien. El esquema estaría más compleeto si hubieras declarando un tipo para el nif que utilice una expresión regular.
+ -->
+
 <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/calificaciones"
 	xmlns:tns="http://www.example.org/calificaciones" elementFormDefault="qualified">
 
