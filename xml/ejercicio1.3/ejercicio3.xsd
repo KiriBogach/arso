@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- 
-	Bien. El esquema estaría más compleeto si hubieras declarando un tipo para el nif que utilice una expresión regular.
- -->
+<!-- Bien. El esquema estaría más completo si hubieras declarando un tipo 
+	para el nif que utilice una expresión regular. -->
+	
+<!-- Correcto, lo he añadido. ¡Gracias! -->
 
 <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/calificaciones"
 	xmlns:tns="http://www.example.org/calificaciones" elementFormDefault="qualified">
@@ -31,7 +32,7 @@
 
 	<complexType name="tipo_calificacion">
 		<sequence>
-			<element name="nif" type="string" />
+			<element name="nif" type="tns:tipo_nif" />
 			<element name="nombre" type="string" minOccurs="0" />
 			<element name="nota" type="tns:tipo_nota" />
 		</sequence>
@@ -54,7 +55,13 @@
 			<maxInclusive value="10" />
 		</restriction>
 	</simpleType>
-	
+
+	<simpleType name="tipo_nif">
+		<restriction base="string">
+			<pattern value="\d{8}[a-zA-Z]{1}"/>
+		</restriction>
+	</simpleType>
+
 	<!-- Elemento raíz: -->
 	<element name="calificaciones" type="tns:tipo_calificaciones" />
 </schema>
