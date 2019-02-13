@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<calificaciones convocatoria="junio" curso="2019"
+	xmlns="http://www.example.org/calificaciones" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/calificaciones ejercicio3.xsd ">
+
+	<asignatura>ArSo</asignatura>
+	<calificacion>
+		<nif>75126520G</nif>
+		<nombre>Kyryl Bogach</nombre>
+		<nota>9.1</nota>
+	</calificacion>
+	<calificacion>
+		<nif>48215212F</nif>
+		<nombre>Antonio Garcia</nombre>
+		<nota>5.715</nota>
+	</calificacion>
+
+	<diligencia extraordinaria="si">
+		<nif>57292512F</nif>
+		<nombre>Pedro Ferrandez</nombre>
+		<nota>9.52</nota>
+		<fecha>2019-02-13</fecha>
+	</diligencia>
+	
+	<diligencia>
+		<nif>87292512F</nif>
+		<nota>1.8</nota>
+		<fecha>2019-07-26</fecha>
+	</diligencia>
+	
+	<diligencia extraordinaria="si">
+		<nif>67292512F</nif>
+		<nota>0.5</nota>
+		<fecha>2019-07-26</fecha>
+	</diligencia>
+	
+</calificaciones>

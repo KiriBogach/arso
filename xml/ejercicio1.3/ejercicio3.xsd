@@ -5,63 +5,60 @@
 	
 <!-- Correcto, lo he añadido. ¡Gracias! -->
 
-<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/calificaciones"
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/calificaciones"
 	xmlns:tns="http://www.example.org/calificaciones" elementFormDefault="qualified">
 
 	<!-- Tipos: -->
-	<complexType name="tipo_calificaciones">
-		<sequence>
-			<element name="asignatura" type="string" />
-			<element name="calificacion" type="tns:tipo_calificacion"
-				maxOccurs="unbounded" />
-			<element name="diligencia" type="tns:tipo_diligencia"
-				minOccurs="0" maxOccurs="unbounded" />
-		</sequence>
-		<attribute name="curso" type="positiveInteger" use="optional" />
-		<attribute name="convocatoria" type="tns:tipo_convocatoria"
-			use="required" />
-	</complexType>
+	<xs:complexType name="tipo_calificaciones">
+		<xs:sequence>
+			<xs:element name="asignatura" type="xs:string" />
+			<xs:element name="calificacion" type="tns:tipo_calificacion" maxOccurs="unbounded" />
+			<xs:element name="diligencia" type="tns:tipo_diligencia" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attribute name="curso" type="xs:positiveInteger" use="optional" />
+		<xs:attribute name="convocatoria" type="tns:tipo_convocatoria" use="required" />
+	</xs:complexType>
 
-	<simpleType name="tipo_convocatoria">
-		<restriction base="string">
-			<enumeration value="febrero" />
-			<enumeration value="junio" />
-			<enumeration value="julio" />
-		</restriction>
-	</simpleType>
+	<xs:simpleType name="tipo_convocatoria">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="febrero" />
+			<xs:enumeration value="junio" />
+			<xs:enumeration value="julio" />
+		</xs:restriction>
+	</xs:simpleType>
 
-	<complexType name="tipo_calificacion">
-		<sequence>
-			<element name="nif" type="tns:tipo_nif" />
-			<element name="nombre" type="string" minOccurs="0" />
-			<element name="nota" type="tns:tipo_nota" />
-		</sequence>
-	</complexType>
+	<xs:complexType name="tipo_calificacion">
+		<xs:sequence>
+			<xs:element name="nif" type="tns:tipo_nif" />
+			<xs:element name="nombre" type="xs:string" minOccurs="0" />
+			<xs:element name="nota" type="tns:tipo_nota" />
+		</xs:sequence>
+	</xs:complexType>
 
-	<complexType name="tipo_diligencia">
-		<complexContent>
-			<extension base="tns:tipo_calificacion">
-				<sequence>
-					<element name="fecha" type="date" />
-				</sequence>
-				<attribute name="extraordinaria" type="string" default="no" />
-			</extension>
-		</complexContent>
-	</complexType>
+	<xs:complexType name="tipo_diligencia">
+		<xs:complexContent>
+			<xs:extension base="tns:tipo_calificacion">
+				<xs:sequence>
+					<xs:element name="fecha" type="xs:date" />
+				</xs:sequence>
+				<xs:attribute name="extraordinaria" type="xs:string" default="no" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 
-	<simpleType name="tipo_nota">
-		<restriction base="double">
-			<minInclusive value="0" />
-			<maxInclusive value="10" />
-		</restriction>
-	</simpleType>
+	<xs:simpleType name="tipo_nota">
+		<xs:restriction base="xs:double">
+			<xs:minInclusive value="0" />
+			<xs:maxInclusive value="10" />
+		</xs:restriction>
+	</xs:simpleType>
 
-	<simpleType name="tipo_nif">
-		<restriction base="string">
-			<pattern value="\d{8}[a-zA-Z]{1}"/>
-		</restriction>
-	</simpleType>
+	<xs:simpleType name="tipo_nif">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\d{8}[a-zA-Z]{1}" />
+		</xs:restriction>
+	</xs:simpleType>
 
 	<!-- Elemento raíz: -->
-	<element name="calificaciones" type="tns:tipo_calificaciones" />
-</schema>
+	<xs:element name="calificaciones" type="tns:tipo_calificaciones" />
+</xs:schema>
