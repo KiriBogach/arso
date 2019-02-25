@@ -9,6 +9,8 @@ import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.XMLStreamReader;
 
+// Bien.
+
 public class StAX_1_4 {
 
 	public static void main(String[] args) throws Exception {
