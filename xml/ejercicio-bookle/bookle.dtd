@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT bookle (actividades)>
+<!ELEMENT actividades (actividad*)>
+<!ELEMENT actividad (titulo, descripcion?, profesor, email?, agendas)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT profesor (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT agendas (agenda+)>
+<!ELEMENT agenda (fecha, turnos)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT turnos (turno+)>
+<!ELEMENT turno (horario, reserva?)>
+<!ELEMENT horario (#PCDATA)>
+<!ELEMENT reserva (alumno, email?)>
+<!ELEMENT alumno (#PCDATA)>
+
+<!ATTLIST actividad 
+	id CDATA #REQUIRED>
+<!ATTLIST reserva 
+	id CDATA #REQUIRED>

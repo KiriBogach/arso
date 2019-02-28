@@ -1,4 +1,4 @@
-package sax.ejercicio1_4;
+package sax.ejercicio4;
 
 import java.io.IOException;
 
@@ -27,7 +27,7 @@ public class SAX {
 
 		try {
 			Manejador manejador = new Manejador();
-			analizador.parse("xml/ejercicio1.3/ejercicio3_diligencias.xml", manejador);
+			analizador.parse("xml/ejercicio3/ejercicio3_diligencias.xml", manejador);
 			
 			System.out.println("Número de diligencias encontradas: " + manejador.getNumeroDiligencias());
 		} 

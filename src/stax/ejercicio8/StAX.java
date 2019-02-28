@@ -1,4 +1,4 @@
-package stax.ejercicio1_8;
+package stax.ejercicio8;
 
 import java.io.FileInputStream;
 import java.text.SimpleDateFormat;
@@ -11,11 +11,11 @@ import javax.xml.stream.XMLStreamReader;
 
 // Bien.
 
-public class StAX_1_4 {
+public class StAX {
 
 	public static void main(String[] args) throws Exception {
 
-		final String FICHERO_ENTRADA = "xml/ejercicio1.3/ejercicio3_diligencias.xml";
+		final String FICHERO_ENTRADA = "xml/ejercicio3/ejercicio3_diligencias.xml";
 		XMLInputFactory xif = XMLInputFactory.newInstance();
 
 		/* EJERCICIO 1.4 */

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE poema SYSTEM "bookle.dtd">
+
+<bookle>
+	<actividades>
+		<actividad id="5">
+			<titulo>Entrevista Prácticas ArSo</titulo>
+			<descripcion>[OPCIONAL] Evaluamos la práctica</descripcion>
+			<profesor>Marcos Senpai</profesor>
+			<email>[OPCIONAL] marcos@um.es</email>
+			<agendas>
+				<agenda>
+					<fecha>2018-02-26</fecha>
+					<turnos>
+						<turno>
+							<horario>9:00 - 10:00</horario>
+							<reserva id="10">
+								<alumno>Kyryl Bogach</alumno>
+								<email>[OPCIONAL] k.bogach@gmail.com</email>
+							</reserva>
+						</turno>
+						<turno>
+							<horario>10:00 - 11:00</horario>
+						</turno>
+					</turnos>
+				</agenda>
+				<agenda>
+					<fecha>2018-02-27</fecha>
+					<turnos>
+						<turno>
+							<horario>10:30 - 11:30</horario>
+							<reserva id="17">
+								<alumno>Joaquín Brotons</alumno>
+							</reserva>
+						</turno>
+					</turnos>
+				</agenda>
+			</agendas>
+		</actividad>
+	</actividades>
+</bookle>

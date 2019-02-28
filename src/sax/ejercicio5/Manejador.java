@@ -1,4 +1,4 @@
-package sax.ejercicio1_5;
+package sax.ejercicio5;
 
 import java.util.LinkedList;
 

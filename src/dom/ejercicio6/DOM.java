@@ -1,4 +1,4 @@
-package dom.ejercicio1_6;
+package dom.ejercicio6;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -13,7 +13,7 @@ public class DOM {
 
 	public static void main(String[] args) throws Exception {
 
-		final String FICHERO = "xml/ejercicio1.3/ejercicio3_diligencias.xml";
+		final String FICHERO = "xml/ejercicio3/ejercicio3_diligencias.xml";
 
 		// 1. Obtener una factoría
 		DocumentBuilderFactory factoria = DocumentBuilderFactory.newInstance();

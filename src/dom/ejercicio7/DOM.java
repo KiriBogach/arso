@@ -1,4 +1,4 @@
-package dom.ejercicio1_7;
+package dom.ejercicio7;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -19,8 +19,8 @@ public class DOM {
 
 	public static void main(String[] args) throws Exception {
 
-		final String FICHERO_ENTRADA = "xml/ejercicio1.3/ejercicio3_diligencias.xml";
-		final String FICHERO_SALIDA = "xml/ejercicio1.3/calificaciones-modificado.xml";
+		final String FICHERO_ENTRADA = "xml/ejercicio3/ejercicio3_diligencias.xml";
+		final String FICHERO_SALIDA = "xml/ejercicio3/calificaciones-modificado.xml";
 		final double NOTA_MAXIMA = 10.0;
 		final double INCREMENTO = 0.5;
 
