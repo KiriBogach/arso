@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!--
+	La intención es un documento XML contenga solo una actividad. Por lo tanto, el elemento raíz debería ser actividad
+-->
+	
+
 <!ELEMENT bookle (actividades)>
 <!ELEMENT actividades (actividad*)>
 <!ELEMENT actividad (titulo, descripcion?, profesor, email?, agendas)>

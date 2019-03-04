@@ -3,6 +3,8 @@
 
 	<xsl:output method="xml" indent="yes"/>
 
+	<!-- Bien. -->
+
 	<xsl:template match="/">
 		<html>
 			<head>

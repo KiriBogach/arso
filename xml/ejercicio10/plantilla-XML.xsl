@@ -4,6 +4,8 @@
 	<xsl:output method="xml" indent="yes" />
 
 
+	<!-- Bien. -->
+
 	<xsl:template match="/">
 		<poema fecha="{html/body/h2}" lugar="{html/body/h2/em}">
 			<titulo>
