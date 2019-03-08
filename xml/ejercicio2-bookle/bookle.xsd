@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/bookle"
+	xmlns:tns="http://www.example.org/bookle"
+	elementFormDefault="qualified">
+
+	<!-- Elemento raíz: -->
+	<xs:element name="actividad" type="tns:tipo_actividad" />
+
+	<!-- Tipos: -->
+	<xs:complexType name="tipo_actividad">
+		<xs:sequence>
+			<xs:element name="titulo" type="xs:string" />
+			<xs:element name="descripcion" type="xs:string"
+				minOccurs="0" />
+			<xs:element name="profesor" type="xs:string" />
+			<xs:element name="email" type="tns:tipo_email"
+				minOccurs="0" />
+			<xs:element name="agendas" type="tns:tipo_agendas" />
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:unsignedLong"
+			use="required" />
+	</xs:complexType>
+
+	<xs:complexType name="tipo_agendas">
+		<xs:sequence>
+			<xs:element name="agenda" type="tns:tipo_agenda"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="tipo_agenda">
+		<xs:sequence>
+			<xs:element name="fecha" type="xs:date" />
+			<xs:element name="turnos" type="tns:tipo_turnos" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="tipo_turnos">
+		<xs:sequence>
+			<xs:element name="turno" type="tns:tipo_turno"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="tipo_turno">
+		<xs:sequence>
+			<xs:element name="horario" type="xs:string" />
+			<xs:element name="reserva" type="tns:tipo_reserva"
+				minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="tipo_reserva">
+		<xs:sequence>
+			<xs:element name="alumno" type="xs:string" />
+			<xs:element name="email" type="tns:tipo_email"
+				minOccurs="0" />
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:unsignedLong"
+			use="required" />
+	</xs:complexType>
+
+	<xs:simpleType name="tipo_email">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[^@]+@[^\.]+\..+" />
+		</xs:restriction>
+	</xs:simpleType>
+
+</xs:schema>

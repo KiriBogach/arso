@@ -4,6 +4,10 @@
 	La intención es un documento XML contenga solo una actividad. Por lo tanto, el elemento raíz debería ser actividad
 -->
 
+<!--
+	Correcto, si nos focalizamos solo en este ámbito. Había pensado en extensibilidad por ello había creado un elemento raíz más grande.
+-->
+
 <!ELEMENT actividad (titulo, descripcion?, profesor, email?, agendas)>
 <!ELEMENT titulo (#PCDATA)>
 <!ELEMENT descripcion (#PCDATA)>
