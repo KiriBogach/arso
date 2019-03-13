@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<calificaciones xmlns="http://www.example.org/calificaciones" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" curso="2018" convocatoria="febrero" xsi:schemaLocation="http://www.example.org/calificaciones ejercicio3.xsd">
+    <asignatura>1092</asignatura>
+    <calificacion>
+        <nif>23322156M</nif>
+        <nota>10.0</nota>
+    </calificacion>
+    <calificacion>
+        <nif>13322156M</nif>
+        <nombre>Pepe</nombre>
+        <nota>8.0</nota>
+    </calificacion>
+    <diligencia>
+        <nif>13322156M</nif>
+        <nota>8.0</nota>
+        <fecha>2019-03-12+01:00</fecha>
+    </diligencia>
+</calificaciones>

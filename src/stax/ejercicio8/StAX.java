@@ -83,6 +83,6 @@ public class StAX {
 			System.out.println("No se han encontrado notas");
 		}
 
-		System.out.println("fin.");
+		System.out.println("Fin.");
 	}
 }

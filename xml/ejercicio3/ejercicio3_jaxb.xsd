@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Bien. El esquema estaría más completo si hubieras declarando un tipo 
+	para el nif que utilice una expresión regular. -->
+	
+<!-- Correcto, lo he añadido. ¡Gracias! -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/calificaciones"
+	xmlns:tns="http://www.example.org/calificaciones" elementFormDefault="qualified">
+
+	<!-- Elemento raíz: -->
+	
+	<xs:element name="calificaciones" >
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="asignatura" type="xs:string" />
+				<xs:element name="calificacion" type="tns:tipo_calificacion" maxOccurs="unbounded" />
+				<xs:element name="diligencia" type="tns:tipo_diligencia" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+			<xs:attribute name="curso" type="xs:positiveInteger" use="optional" />
+			<xs:attribute name="convocatoria" type="tns:tipo_convocatoria" use="required" />
+		</xs:complexType>
+	</xs:element>
+
+	<!-- Tipos: -->
+	
+	<xs:simpleType name="tipo_convocatoria">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="febrero" />
+			<xs:enumeration value="junio" />
+			<xs:enumeration value="julio" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="tipo_calificacion">
+		<xs:sequence>
+			<xs:element name="nif" type="tns:tipo_nif" />
+			<xs:element name="nombre" type="xs:string" minOccurs="0" />
+			<xs:element name="nota" type="tns:tipo_nota" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="tipo_diligencia">
+		<xs:complexContent>
+			<xs:extension base="tns:tipo_calificacion">
+				<xs:sequence>
+					<xs:element name="fecha" type="xs:date" />
+				</xs:sequence>
+				<xs:attribute name="extraordinaria" type="xs:string" default="no" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:simpleType name="tipo_nota">
+		<xs:restriction base="xs:double">
+			<xs:minInclusive value="0" />
+			<xs:maxInclusive value="10" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="tipo_nif">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\d{8}[a-zA-Z]{1}" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+</xs:schema>
