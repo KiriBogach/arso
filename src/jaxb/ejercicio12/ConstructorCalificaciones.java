@@ -15,6 +15,9 @@ import calificaciones.TipoCalificacion;
 import calificaciones.TipoConvocatoria;
 import calificaciones.TipoDiligencia;
 
+// Bien
+
+
 public class ConstructorCalificaciones {
 	public static void main(String[] args) throws Exception {
 		final String FICHERO_SALIDA = "xml/ejercicio3/calificaciones-creado-jaxb.xml";

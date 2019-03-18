@@ -12,6 +12,8 @@ import calificaciones.TipoDiligencia;
 
 public class Ejercicio4 {
 
+	// Bien
+	
 	public static void main(String[] args) throws Exception {
 
 		final String documento = "xml/ejercicio3/ejercicio3_diligencias.xml";
