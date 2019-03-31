@@ -8,23 +8,22 @@
 	elementFormDefault="qualified">
 
 	<!-- Elemento raíz: -->
-	<xs:element name="actividad" type="tns:tipo_actividad" />
+	<xs:element name="actividad">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="titulo" type="xs:string" />
+				<xs:element name="descripcion" type="xs:string"
+					minOccurs="0" />
+				<xs:element name="profesor" type="xs:string" />
+				<xs:element name="email" type="tns:tipo_email"
+					minOccurs="0" />
+				<xs:element name="agendas" type="tns:tipo_agendas" />
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:string" use="required" />
+		</xs:complexType>
+	</xs:element>
 
 	<!-- Tipos: -->
-	<xs:complexType name="tipo_actividad">
-		<xs:sequence>
-			<xs:element name="titulo" type="xs:string" />
-			<xs:element name="descripcion" type="xs:string"
-				minOccurs="0" />
-			<xs:element name="profesor" type="xs:string" />
-			<xs:element name="email" type="tns:tipo_email"
-				minOccurs="0" />
-			<xs:element name="agendas" type="tns:tipo_agendas" />
-		</xs:sequence>
-		<xs:attribute name="id" type="xs:unsignedLong"
-			use="required" />
-	</xs:complexType>
-
 	<xs:complexType name="tipo_agendas">
 		<xs:sequence>
 			<xs:element name="agenda" type="tns:tipo_agenda"
@@ -60,8 +59,7 @@
 			<xs:element name="email" type="tns:tipo_email"
 				minOccurs="0" />
 		</xs:sequence>
-		<xs:attribute name="id" type="xs:unsignedLong"
-			use="required" />
+		<xs:attribute name="id" type="xs:string" use="required" />
 	</xs:complexType>
 
 	<xs:simpleType name="tipo_email">
