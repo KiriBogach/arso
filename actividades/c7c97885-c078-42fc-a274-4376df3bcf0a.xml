@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<actividad xmlns="http://www.example.org/bookle" id="c7c97885-c078-42fc-a274-4376df3bcf0a">
+    <titulo>Revisión Actividad JAXB :)</titulo>
+    <descripcion>Feedback del código implementado</descripcion>
+    <profesor>Don Marcos</profesor>
+    <email>marcos@um.es</email>
+    <agendas>
+        <agenda>
+            <fecha>2019-02-26</fecha>
+            <turnos>
+                <turno>
+                    <horario></horario>
+                    <reserva id="4dd6ea0e-6730-49be-ac24-4b49d3344490">
+                        <alumno>Kyryl</alumno>
+                        <email>kyryl.bogach@um.es</email>
+                    </reserva>
+                </turno>
+                <turno>
+                    <horario></horario>
+                </turno>
+                <turno>
+                    <horario></horario>
+                </turno>
+            </turnos>
+        </agenda>
+    </agendas>
+</actividad>

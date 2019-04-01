@@ -17,6 +17,10 @@ import bookle.tipos.TipoReserva;
 import bookle.tipos.TipoTurno;
 import bookle.tipos.TipoTurnos;
 
+// Muy bien.
+
+
+
 public class Controlador implements BookleControlador {
 
 	public final static String FOLDER = "actividades/";
