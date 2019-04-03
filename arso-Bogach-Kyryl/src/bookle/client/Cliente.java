@@ -3,14 +3,14 @@ package bookle.client;
 import java.util.Date;
 
 import bookle.controlador.BookleControlador;
-import bookle.controlador.Controlador;
+import bookle.controlador.BookleControladorImpl;
 import bookle.controlador.Utils;
 import bookle.tipos.Actividad;
 
 public class Cliente {
 
 	public static void main(String[] args) {
-		BookleControlador controlador = new Controlador();
+		BookleControlador controlador = new BookleControladorImpl();
 		String id = controlador.createActividad("Revision Actividades", "Feedback del código implementado", "Marcos",
 				"marcos@um.es");
 

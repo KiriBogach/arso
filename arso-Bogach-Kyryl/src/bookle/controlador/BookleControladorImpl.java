@@ -21,11 +21,11 @@ import bookle.tipos.TipoTurnos;
 
 
 
-public class Controlador implements BookleControlador {
+public class BookleControladorImpl implements BookleControlador {
 
 	public final static String FOLDER = "actividades/";
 
-	public Controlador() {
+	public BookleControladorImpl() {
 		this.comprobarDirectorio();
 	}
 
