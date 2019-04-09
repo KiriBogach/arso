@@ -20,6 +20,8 @@ import bookle.controlador.BookleControlador;
 import bookle.controlador.BookleControladorImpl;
 import bookle.controlador.Utils;
 
+// Bien.
+
 @Path("actividades")
 public class ServicioBookle {
 

@@ -9,6 +9,8 @@ import com.sun.jersey.api.client.WebResource.Builder;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 
+// Bien.
+
 public class Programa {
 	private static final String URL_SERVICIO = "http://localhost:8080/bookle-rest/rest/";
 
