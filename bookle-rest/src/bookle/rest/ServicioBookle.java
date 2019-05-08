@@ -33,7 +33,6 @@ public class ServicioBookle {
 	public Response createActividad(@FormParam("titulo") String titulo, @FormParam("descripcion") String descripcion,
 			@FormParam("profesor") String profesor, @FormParam("email") String email) {
 
-		System.out.println(titulo);
 		String id = controlador.createActividad(titulo, descripcion, profesor, email);
 		UriBuilder builder = uriInfo.getAbsolutePathBuilder();
 		builder.path(id);

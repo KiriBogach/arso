@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>bookle-rest</name>
+	<name>conversor-soap</name>
 	<comment></comment>
 	<projects>
-		<project>arso-Bogach-Kyryl</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
