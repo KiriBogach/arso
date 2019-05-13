@@ -4,6 +4,8 @@ import com.cdyne.ws.IP2Geo;
 import com.cdyne.ws.IP2GeoSoap;
 import com.cdyne.ws.IPInformation;
 
+// Bien
+
 public class ConsultaUbicacion {
 
 	public static final String LICENCE_KEY = "0";
@@ -20,7 +22,7 @@ public class ConsultaUbicacion {
 		
 		System.out.println("IP consultada: " + CONSULTED_IP);
 		System.out.println("Ciudad: " + ciudad);
-		System.out.println("País: " + pais);
+		System.out.println("PaÃ­s: " + pais);
 	}
 
 }
