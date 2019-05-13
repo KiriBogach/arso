@@ -19,6 +19,6 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>ServletWS</servlet-name>
-    <url-pattern>/saludo</url-pattern>
+    <url-pattern>/conversor</url-pattern>
   </servlet-mapping>
 </web-app>
